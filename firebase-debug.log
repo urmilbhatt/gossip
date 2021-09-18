@@ -1,0 +1,51 @@
+[debug] [2021-09-18T15:37:04.429Z] ----------------------------------------------------------------------
+[debug] [2021-09-18T15:37:04.525Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\URMIL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-09-18T15:37:04.526Z] CLI Version:   9.17.0
+[debug] [2021-09-18T15:37:04.526Z] Platform:      win32
+[debug] [2021-09-18T15:37:04.526Z] Node Version:  v14.15.3
+[debug] [2021-09-18T15:37:04.906Z] Time:          Sat Sep 18 2021 21:07:04 GMT+0530 (India Standard Time)
+[debug] [2021-09-18T15:37:04.907Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-18T15:37:05.211Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-18T15:37:05.212Z] > authorizing via signed-in user (urmilbhatt12@gmail.com)
+[debug] [2021-09-18T15:37:05.212Z] [iam] checking project chit-chat-app-13f76 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2021-09-18T15:37:05.285Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chit-chat-app-13f76:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2021-09-18T15:37:05.820Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. getaddrinfo EAI_AGAIN cloudresourcemanager.googleapis.com
+[debug] [2021-09-18T15:37:05.822Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/chit-chat-app-13f76/serviceAccounts/chit-chat-app-13f76@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-09-18T15:37:05.906Z] [functions] service account IAM check errored, deploy may fail: Server Error. getaddrinfo EAI_AGAIN iam.googleapis.com {"name":"FirebaseError","children":[],"exit":2,"message":"Server Error. getaddrinfo EAI_AGAIN iam.googleapis.com","original":{"errno":-3001,"code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"iam.googleapis.com"},"status":500}
+[debug] [2021-09-18T15:37:05.911Z] > refreshing access token with scopes: []
+[debug] [2021-09-18T15:37:05.914Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-18T15:37:06.453Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sat, 18 Sep 2021 15:37:05 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-18T15:37:06.617Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chit-chat-app-13f76 [none]
+[debug] [2021-09-18T15:37:07.303Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chit-chat-app-13f76 200
+[debug] [2021-09-18T15:37:07.304Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chit-chat-app-13f76 {"projectId":"chit-chat-app-13f76","projectNumber":"334086549874","displayName":"chit-chat-app","name":"projects/chit-chat-app-13f76","resources":{"hostingSite":"chit-chat-app-13f76","realtimeDatabaseInstance":"chit-chat-app-13f76-default-rtdb","storageBucket":"chit-chat-app-13f76.appspot.com","locationId":"asia-south1"},"state":"ACTIVE"}
+[debug] [2021-09-18T15:37:07.304Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chit-chat-app-13f76 [none]
+[debug] [2021-09-18T15:37:08.056Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chit-chat-app-13f76 200
+[debug] [2021-09-18T15:37:08.057Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chit-chat-app-13f76 {"projectId":"chit-chat-app-13f76","projectNumber":"334086549874","displayName":"chit-chat-app","name":"projects/chit-chat-app-13f76","resources":{"hostingSite":"chit-chat-app-13f76","realtimeDatabaseInstance":"chit-chat-app-13f76-default-rtdb","storageBucket":"chit-chat-app-13f76.appspot.com","locationId":"asia-south1"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'chit-chat-app-13f76'...
+[info] 
+[info] i  deploying database, firestore, functions, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2021-09-18T15:37:08.090Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-18T15:37:08.090Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-18T15:37:08.497Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sat, 18 Sep 2021 15:37:07 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-18T15:37:08.652Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/chit-chat-app-13f76/locations/-/instances/chit-chat-app-13f76-default-rtdb  
+ 
+[debug] [2021-09-18T15:37:09.639Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 18 Sep 2021 15:37:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-18T15:37:09.658Z] >>> HTTP REQUEST PUT https://chit-chat-app-13f76-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+[debug] [2021-09-18T15:37:09.744Z] Error: getaddrinfo EAI_AGAIN chit-chat-app-13f76-default-rtdb.asia-southeast1.firebasedatabase.app
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26)
+[error] 
+[error] Error: Server Error. getaddrinfo EAI_AGAIN chit-chat-app-13f76-default-rtdb.asia-southeast1.firebasedatabase.app

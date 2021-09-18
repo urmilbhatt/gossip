@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Router, Redirect } from '@reach/router';
+
+import { Nav, Channel, Login } from './components';
+
+import useAuth from './hooks/useAuth';
 
 function App() {
-  return (
+  const user = useAuth();
+
+  return user ? (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav user={user} />
+      <Router>
+        <Channel path="channel/:channelId" user={user} />
+        <Redirect from="/" to="channel/general" noThrow />
+      </Router>
     </div>
-  );
+  ) : (
+    <Login />
+  )
 }
 
 export default App;
